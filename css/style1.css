@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+body {
+    overflow-y: hidden;
+}
+.cntr {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+.cntr > .header {
+    background-color: #fff;
+    min-height: 20vh;
+}
+.cntr > .content {
+   min-height: 70vh;
+   background-color: #fff;
+}
+.cntr > .footer {
+    background-color: #00bcd4;
+}
+
+
+/*Header*/
+.header {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+.main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo {
+    cursor: pointer;
+    width: 90px;
+    height: 50px;
+}
+
+
+/*Content*/
+.content {
+    display: grid;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.content::-webkit-scrollbar {
+  width: 5px;
+}
+.content::-webkit-scrollbar-track {
+  background: #fff; 
+}
+.content::-webkit-scrollbar-thumb {
+  background: #3a5999;
+  border-radius: 2px;
+}
+.buttons {
+    margin-top: 10px;
+}
+b {
+    margin-left: 50px;
+}
+.form {
+    overflow-y: scroll;
+    overflow-x: hidden; 
+    height: 455px;
+}
+.form::-webkit-scrollbar {
+  width: 5px;
+}
+.form::-webkit-scrollbar-track {
+  background: #fff; 
+}
+.form::-webkit-scrollbar-thumb {
+  background: #3a5999;
+  border-radius: 2px;
+}
+input[type=file] {
+    display: none;
+}
+i {
+    font-size: 28px;
+    font-weight: 800;
+    cursor: pointer;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;  
+}
+.dropdown {
+  width: 100%;
+  background: #fff;
+  color: #333;
+  max-height: 150px;
+  overflow-x: hidden;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 
+              0 3px 1px -2px rgba(153, 153, 153, 0.2),
+              0 1px 5px 0 rgba(153, 153, 153, 0.12);
+}
+
+.dropdown__city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 2px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.dropdown__city:hover {
+  color: #fff;
+  background-color: #00bcd4;
+}
+
+@media screen and (max-width: 540px) {
+  .cntr > .header {
+    min-height: 30vh;
+  }
+  .cntr > .content {
+    min-height: 60vh;
+  }
+  .main-header {
+    flex-direction: column;
+
+  }
+  b {
+    margin-left: 2vw;
+  }
+  .footer {
+    font-size: 11px;
+  }
+  .footer .nav {
+    flex-wrap: nowrap;
+  }
+  .footer a {
+    padding: 8px 8px;
+  }
+}
